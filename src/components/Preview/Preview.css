@@ -1,0 +1,13 @@
+.preview {
+    grid-column: 4 / 4;
+    grid-row: 2 / 4;
+    border-left: var(--divider-border);
+}
+
+@media (max-width: 900px) {
+    .preview {
+        grid-row: 3 / 4;
+        grid-column: 1 / 5;
+        border-top: var(--divider-border);
+    }
+}
