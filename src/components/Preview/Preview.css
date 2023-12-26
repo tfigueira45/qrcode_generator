@@ -1,4 +1,7 @@
 .preview {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
     grid-column: 4 / 4;
     grid-row: 2 / 4;
     border-left: var(--divider-border);

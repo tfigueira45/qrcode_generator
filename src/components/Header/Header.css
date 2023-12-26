@@ -1,16 +1,21 @@
+@font-face {
+    font-family: TextMeOne;
+    src: url("../../assets/fonts/TextMeOne-Regular.ttf");
+}
+
 header {
     display: flex;
     justify-content: left;
     align-items: center;
     grid-column: 1 / 5;
     grid-row: 1 / 1;
-    height: 50px;
+    height: 60px;
     border-bottom: var(--divider-border);
 }
 
 header h1 {
-    font-family: sans-serif;
-    font-weight: 500;
+    font-family: TextMeOne, sans-serif;
+    font-weight: 600;
     font-size: 24px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
