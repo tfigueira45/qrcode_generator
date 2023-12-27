@@ -8,7 +8,7 @@ function Dashboard() {
     return (
         <section className="dashboard">
             <h2>Crie um novo QR Code</h2>
-            <DropdownMenu options={liItems} />
+            <DropdownMenu options={liItems}/>
         </section>
     )
 }

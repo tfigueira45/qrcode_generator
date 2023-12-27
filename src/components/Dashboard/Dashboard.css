@@ -12,6 +12,10 @@
     color: #353333;
 }
 
+.dashboard nav {
+  padding-left: 15px;
+}
+
 @media (max-width: 900px) {
     .dashboard {
         grid-row: 2 / 3;
