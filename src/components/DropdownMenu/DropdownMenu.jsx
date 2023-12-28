@@ -1,9 +1,11 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import arrowBottom from "../../assets/icons/arrowBottom.svg";
 import "./DropdownMenu.css";
+import { QrCodeContext } from "../../contexts/QrCodeContext";
 
-function DropdownMenu({options}) {
-    const [data, setData] = useState(options[0])
+function DropdownMenu({options, handleSelect}) {
+    const { setValue } = useContext(QrCodeContext)
+    const [ data, setData ] = useState(options[0])
     const [showOptions, setShowOptions] = useState(false)
 
     const Menu = ({values}) => {
@@ -11,6 +13,7 @@ function DropdownMenu({options}) {
 
         const handleClick = ({target}) => {
             setData(target.innerText)
+            handleSelect(target)
         }
 
         const hideMenu = () => {

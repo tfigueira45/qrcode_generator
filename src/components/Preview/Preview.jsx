@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import "./Preview.css"
+import { QrCodeContext } from "../../contexts/QrCodeContext";
 
 function Preview() {
+    const { value } = useContext(QrCodeContext)
+
+    const v = value.data.text ? value.data.text : "" 
+    
     return (
         <section className="preview">
             <QRCodeCanvas 
-                value="https://tfigueira45.github.io/qrcode_generator" 
+                value={v}
                 bgColor="#ffffff" 
                 fgColor="#000000"
             />
