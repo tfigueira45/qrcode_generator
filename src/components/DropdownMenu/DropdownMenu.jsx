@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect, useContext } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import arrowBottom from "../../assets/icons/arrowBottom.svg";
 import "./DropdownMenu.css";
-import { QrCodeContext } from "../../contexts/QrCodeContext";
+
 
 function DropdownMenu({options, handleSelect}) {
-    const { setValue } = useContext(QrCodeContext)
+    
     const [ data, setData ] = useState(options[0])
     const [showOptions, setShowOptions] = useState(false)
 

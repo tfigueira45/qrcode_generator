@@ -5,7 +5,7 @@ import { QrCodeContext } from "../../../contexts/QrCodeContext";
 
 function TypeName() {
     const { setValue } = useContext(QrCodeContext)
-    const liItems = ["URL", "Text", "Wi-fi"]
+    const liItems = ["URL", "Text", "Wifi"]
 
     const handleChange = ({target}) => {
         setValue(prev => {

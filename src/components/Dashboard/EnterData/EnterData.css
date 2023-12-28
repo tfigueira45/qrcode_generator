@@ -1,0 +1,15 @@
+.qrcode-data-container h1 {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 12px;
+    color: #353333;
+}
+
+.qrcode-url-container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 15px 10px 20px;
+    gap: 15px;
+}
+
