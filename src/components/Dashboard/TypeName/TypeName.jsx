@@ -15,12 +15,12 @@ function TypeName() {
 
     const handleSelect = (target) => {
         setValue(prev => {
-            return {...prev, type: target.innerText}
+            return {...prev, type: target.innerText, data: {text : "https://tfigueira45.github.io/qrcode_generator"}}
         })
     }
 
     return (
-        <section className="qrcode-typeName-container">
+        <section className="qrcode-typeName-container centered">
             <DropdownMenu options={liItems} handleSelect={handleSelect} />
             <input type="text" className="qrcode-name-input" onChange={handleChange} placeholder="Dê um nome ao seu QR code"/>
         </section>

@@ -1,7 +1,4 @@
 .qrcode-typeName-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 15px;
     padding: 15px 10px 20px;
     border-bottom: var(--divider-border);

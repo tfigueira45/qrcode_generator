@@ -34,8 +34,8 @@ function DropdownMenu({options, handleSelect}) {
         };
 
         return (
-            <ul className={showOptions ? "show" : ""} ref={menuRef} >
-                {values.map(item => <li onClick={handleClick}>{item}</li>)}
+            <ul className={`${showOptions ? "show" : ""} p-5 rounded`} ref={menuRef} >
+                {values.map(item => <li className="m-5" onClick={handleClick}>{item}</li>)}
             </ul>
         )
     }
@@ -46,7 +46,7 @@ function DropdownMenu({options, handleSelect}) {
         }
 
         return (
-            <div className="dropBtn" onClick={handleClick}>
+            <div className="dropBtn centered rounded" onClick={handleClick}>
                 <span>{data}</span>
                 <img  src={arrowBottom} alt="arrownBottom" />
             </div>
@@ -54,7 +54,7 @@ function DropdownMenu({options, handleSelect}) {
     }
 
     return (
-        <nav>
+        <nav className="centered column">
             <DropBtn />
             <Menu values={options} />
         </nav>

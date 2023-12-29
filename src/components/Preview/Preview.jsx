@@ -9,7 +9,7 @@ function Preview() {
     const v = value.data.text ?? "https://tfigueira45.github.io/qrcode_generator/" 
     
     return (
-        <section className="preview">
+        <section className="preview flex column w-400 p-15">
             <h1>Preview</h1>
             <QRCodeCanvas 
                 value={v}
