@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { QrCodeContext } from "../../../../contexts/QrCodeContext";
-import "./Text.css";
 
 const Text = () => {
     const { setValue } = useContext(QrCodeContext);
