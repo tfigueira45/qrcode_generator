@@ -1,10 +1,18 @@
 .preview {
     display: flex;
-    justify-content: center;
-    padding-top: 30px;
+    flex-direction: column;
     grid-column: 4 / 4;
     grid-row: 2 / 4;
     border-left: var(--divider-border);
+}
+
+.preview h1 {
+    font-weight: 500px;
+    padding: 10px;
+}
+
+.preview canvas {
+    margin: 30px auto 10px;
 }
 
 @media (max-width: 900px) {

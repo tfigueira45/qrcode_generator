@@ -10,6 +10,7 @@ function Preview() {
     
     return (
         <section className="preview">
+            <h1>Preview</h1>
             <QRCodeCanvas 
                 value={v}
                 bgColor="#ffffff" 
