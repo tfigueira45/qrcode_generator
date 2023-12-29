@@ -6,7 +6,7 @@ import { QrCodeContext } from "../../contexts/QrCodeContext";
 function Preview() {
     const { value } = useContext(QrCodeContext)
 
-    const v = value.data.text ? value.data.text : "" 
+    const v = value.data.text ?? "https://tfigueira45.github.io/qrcode_generator/" 
     
     return (
         <section className="preview">
