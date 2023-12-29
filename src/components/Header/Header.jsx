@@ -6,7 +6,7 @@ function Header() {
     return (
         <header className="centered">
             <img src={simpleQrLogo} height="50px" width="50px" alt="logo" />
-            <h1 className="p-5">QR Code Generator</h1>
+            <h1 className="p-5">SimpleQR</h1>
         </header>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./TypeName.css";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
 import { QrCodeContext } from "../../../contexts/QrCodeContext";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Dashboard.css";
 import TypeName from "./TypeName/TypeName";
 import EnterData from "./EnterData/EnterData"

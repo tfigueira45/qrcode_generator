@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { QrCodeContext } from "../../../../contexts/QrCodeContext";
 import "./Text.css";
 
