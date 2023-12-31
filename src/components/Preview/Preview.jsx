@@ -1,21 +1,26 @@
 import React, { useContext } from "react";
-import { QRCodeCanvas } from "qrcode.react";
+import { QRCodeSVG } from "qrcode.react";
 import "./Preview.css"
 import { QrCodeContext } from "../../contexts/QrCodeContext";
 
 function Preview() {
     const { value } = useContext(QrCodeContext)
 
-    const v = value.data.text ?? "https://tfigueira45.github.io/qrcode_generator/" 
+    const v = value.data.text ?? "https://tfigueira45.github.io/qrcode_generator/";
     
     return (
         <section className="preview flex column w-400 p-15">
             <h1>Preview</h1>
-            <QRCodeCanvas 
+            <QRCodeSVG 
                 value={v}
                 bgColor="#ffffff" 
                 fgColor="#000000"
             />
+            <div className="custom">
+                <h3>Editar Design</h3>
+                <span>Cores</span>
+                
+            </div>
         </section>
     )
 }

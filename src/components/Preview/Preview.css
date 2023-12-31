@@ -4,7 +4,7 @@
     border-left: var(--divider-border);
 }
 
-.preview canvas {
+.preview svg {
     margin: 40px auto 10px;
 }
 
