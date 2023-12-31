@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import "./Preview.css"
 import { QrCodeContext } from "../../contexts/QrCodeContext";
+import InputColor from "./InputColor/InputColor";
 
 function Preview() {
     const { value } = useContext(QrCodeContext)
@@ -19,7 +20,7 @@ function Preview() {
             <div className="custom">
                 <h3>Editar Design</h3>
                 <span>Cores</span>
-                
+                <InputColor />
             </div>
         </section>
     )

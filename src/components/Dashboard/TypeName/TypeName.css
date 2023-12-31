@@ -2,16 +2,3 @@
     gap: 15px;
 }
 
-.qrcode-name-input {
-    appearance: none;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    outline: var(--divider-border);
-    width: calc(100% - 200px);
-    padding: 0px 10px;
-}
-
-.qrcode-name-input:focus {
-    outline: 1px solid #002124;
-}

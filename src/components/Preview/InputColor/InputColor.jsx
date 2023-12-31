@@ -6,10 +6,10 @@ function InputColor() {
     
 
     return (
-        <div>
-            <input type="text" name="colorText" id="colorText" className="colorText" ref={colorText} />
+        <div className="input-color-container">
+            <input type="text" name="colorText" id="colorText" className="colorText input-style" />
             <div style={style}>
-                <input type="color" name="colorInput" id="colorInput" ref={colorInput} />
+                <input type="color" name="colorInput" id="colorInput" />
             </div>
         </div>
     )
