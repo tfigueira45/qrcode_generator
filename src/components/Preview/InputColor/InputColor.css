@@ -1,5 +1,5 @@
 .input-color-container {
-    
+    gap: 10px;
 }
 
 input[type="color"] {

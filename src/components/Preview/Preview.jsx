@@ -20,7 +20,7 @@ function Preview() {
             <div className="custom">
                 <h3>Editar Design</h3>
                 <span>Cores</span>
-                <InputColor />
+                <InputColor defColor="#000000" />
             </div>
         </section>
     )
