@@ -26,6 +26,7 @@ function Preview() {
                 <InputColor label="Cor Primária" index="fgColor" defValue="#000000" />
                 <InputColor label="Cor de Fundo" index="bgColor" defValue="#ffffff" />
             </div>
+            <div>Download</div>
         </section>
     )
 }
