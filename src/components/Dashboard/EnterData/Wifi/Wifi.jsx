@@ -29,14 +29,14 @@ function Wifi() {
 
     return (
         <div className="qrcode-wifi-container m-15">
-            <span className="m-15 block">Nome da Rede</span>
-            <input type="text" className="input-style wd-100 m-15" id="network" onChange={handleChange} placeholder="Digite o nome da rede"/>
+            <span className="m-5 block">Nome da Rede</span>
+            <input type="text" className="input-style wd-100-200px m-10" id="network" onChange={handleChange} placeholder="Digite o nome da rede"/>
 
-            <span className="m-15 block">Tipo de Rede</span>
+            <span className="m-5 block">Tipo de Rede</span>
             <DropdownMenu options={options} handleSelect={handleSelect} />
 
-            <span className="m-15 block">Senha</span>
-            <input type="text" className="input-style wd-100 m-15" id="password" onChange={handleChange} placeholder="Digite a senha da rede"/>
+            <span className="m-5 block">Senha</span>
+            <input type="text" className="input-style wd-100-200px m-10" id="password" onChange={handleChange} placeholder="Digite a senha da rede"/>
         </div>
     )
 }

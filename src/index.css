@@ -71,6 +71,10 @@ code {
   padding: 5px;
 }
 
+.m-10 {
+  margin: 10px;
+}
+
 .w-400 {
   font-weight: 400;
 }
@@ -99,6 +103,10 @@ code {
   width: 100%;
 }
 
+.wd-100-200px {
+  width: calc(100% - 200px);
+}
+
 .wd-50 {
   width: 50%;
 }
@@ -113,4 +121,8 @@ code {
 
 .fz-24{
   font-size: 24px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

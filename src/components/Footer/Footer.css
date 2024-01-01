@@ -1,6 +1,0 @@
-footer {
-    grid-column: 1 / 5;
-    grid-row: 4 / 4;
-    border-top: var(--divider-border);
-}
-

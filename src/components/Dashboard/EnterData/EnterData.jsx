@@ -10,7 +10,7 @@ function EnterData() {
 
     return (
         <section className="qrcode-data-container">
-            <h1 className="w-500 p-15">{value.type}</h1>
+            <h1 className="w-500 m-10">{value.type}</h1>
             {value.type === "Text" ? <Text /> : value.type === "URL" ? <Url /> : <Wifi />}
         </section>
     )
