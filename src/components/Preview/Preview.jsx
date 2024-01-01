@@ -19,8 +19,8 @@ function Preview() {
             />
             <div className="custom">
                 <h3>Editar Design</h3>
-                <span>Cores</span>
-                <InputColor defColor="#000000" />
+                <span className="block">Cores</span>
+                <InputColor defColor="#000000" label="Cor Primária" />
             </div>
         </section>
     )

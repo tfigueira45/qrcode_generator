@@ -25,6 +25,10 @@ code {
   display: flex;
 }
 
+.block {
+  display: block;
+}
+
 .centered {
   display: flex;
   justify-content: center;

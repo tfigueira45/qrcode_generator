@@ -1,9 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import "./InputColor.css";
 
-function InputColor({defColor}) {
-    const style = {borderRadius: "20px", overflow: "hidden", height: "40px", width: "40px"}; 
-    
+function InputColor({defColor, label}) {
     const [color, setColor] = useState(defColor);
     
     const handleChange = ({target}) => {
@@ -11,12 +9,13 @@ function InputColor({defColor}) {
     }
 
     return (
-        <div className="input-color-container flex center">
-            <input type="text" name="colorText" id="colorText" className="colorText input-style" value={color} />
-            <div style={style}>
-                <input type="color" name="colorInput" id="colorInput" value={color} />
+        <React.Fragment>
+            <label htmlFor="colorInput">{label}</label>
+            <div className="input-color-container flex center">
+                <input type="text" name="colorText" id="colorText" className="colorText input-style" value={color} onChange={handleChange} />
+                <input type="color" name="colorInput" id="colorInput" value={color} onChange={handleChange} />
             </div>
-        </div>
+        </React.Fragment>
     )
 };
 
