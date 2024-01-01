@@ -6,7 +6,7 @@ const Text = () => {
 
     const handleChange = ({target}) => {
         setValue(prev => {
-            return {...prev, data: { text: target.value }}
+            return {...prev, data: {...prev.data, text: target.value }}
         })
     }
 

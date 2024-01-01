@@ -35,7 +35,9 @@ function DropdownMenu({options, handleSelect}) {
 
         return (
             <ul className={`${showOptions ? "show" : ""} p-5 rounded`} ref={menuRef} >
-                {values.map(item => <li className="m-5" translate="no" onClick={handleClick}>{item}</li>)}
+                {values.map((item, i) => {
+                    return <li className="m-5" key={i} translate="no" onClick={handleClick}>{item}</li>
+                })}
             </ul>
         )
     }

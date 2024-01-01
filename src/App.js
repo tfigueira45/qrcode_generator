@@ -12,8 +12,8 @@ function App() {
       <QrcodeProvider>
         <Dashboard />
         <Preview />
+        <Footer /> 
       </QrcodeProvider>
-      <Footer /> 
     </main>
   );
 }

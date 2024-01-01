@@ -23,7 +23,7 @@ function Wifi() {
     useEffect(() => {
         const { network, password, encryption } = info;
         setValue(prev => {
-            return {...prev, data: { text: network && encryption ? `WIFI:T:${encryption};S:${network};P:${password};`: ""}}
+            return {...prev, data: {...prev.data, text: network && encryption ? `WIFI:T:${encryption};S:${network};P:${password};`: ""}}
         })
     }, [info])
 

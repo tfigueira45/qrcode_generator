@@ -21,6 +21,18 @@ code {
     monospace;
 }
 
+.bg-blue {
+  background-color: #012024;
+}
+
+.bg-blue-light {
+  background-color: #0230364d;
+}
+
+.color-white {
+  color: white;
+}
+
 .flex {
   display: flex;
 }
@@ -85,4 +97,20 @@ code {
 
 .wd-100 {
   width: 100%;
+}
+
+.wd-50 {
+  width: 50%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-24{
+  font-size: 24px;
 }

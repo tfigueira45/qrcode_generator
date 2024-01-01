@@ -11,7 +11,8 @@ const Url = () => {
 
     const handleChange = ({target}) => {
         setValue(prev => {
-            return {...prev, data: { text: /\../.test(`${selected}${target.value}`) ? `${selected}${target.value}` : value.data.text}}
+            const data = prev.data
+            return {...prev, data: {...data, text: /\../.test(`${selected}${target.value}`) ? `${selected}${target.value}` : value.data.text}}
         })
     }
 
