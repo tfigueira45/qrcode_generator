@@ -4,10 +4,17 @@
     border-left: var(--divider-border);
 }
 
-.preview svg {
+.preview canvas {
     margin: 40px auto 10px;
     padding: 5px;
 }
+
+.preview .download {
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+} 
 
 @media (max-width: 900px) {
     .preview {

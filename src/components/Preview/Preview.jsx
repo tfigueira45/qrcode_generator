@@ -1,23 +1,40 @@
-import React, { useContext } from "react";
-import { QRCodeSVG } from "qrcode.react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { QRCodeCanvas } from "qrcode.react";
 import "./Preview.css"
 import { QrCodeContext } from "../../contexts/QrCodeContext";
 import InputColor from "./InputColor/InputColor";
 
 function Preview() {
-    const { value } = useContext(QrCodeContext)
+    const { value } = useContext(QrCodeContext);
+    const downloadRef = useRef();
 
-    const text = value.data.text ?? "https://tfigueira45.github.io/qrcode_generator/";
-    const bgColor = value.data.bgColor;
-    const fgColor = value.data.fgColor;
+    const text = value.data.text;
+    const name = value.name
+    
+    const [colors, setColors] = useState({
+        bgColor: value.data.bgColor,
+        fgColor: value.data.fgColor
+    });
+
+    useEffect(() => {
+        setColors({
+            bgColor: value.data.bgColor,
+            fgColor: value.data.fgColor
+        })
+        const canvas = document.querySelector('canvas');
+        if(canvas && downloadRef.current) {
+            downloadRef.current.href = canvas.toDataURL();
+            downloadRef.current.download = `${name}-QR.png`;
+        }
+    }, [text, name, colors])
     
     return (
         <section className="preview flex column w-400 p-15">
             <h1>Preview</h1>
-            <QRCodeSVG 
+            <QRCodeCanvas 
                 value={text}
-                bgColor={bgColor}
-                fgColor={fgColor}
+                bgColor={colors.bgColor}
+                fgColor={colors.fgColor}
                 includeMargin="true"
             />
             <div className="custom">
@@ -26,7 +43,7 @@ function Preview() {
                 <InputColor label="Cor Primária" index="fgColor" defValue="#000000" />
                 <InputColor label="Cor de Fundo" index="bgColor" defValue="#ffffff" />
             </div>
-            <div>Download</div>
+            { text && name && colors ? <a ref={downloadRef} href="" className="download centered p-10 bg-blue rounded" download>Download</a> : <></>}
         </section>
     )
 }

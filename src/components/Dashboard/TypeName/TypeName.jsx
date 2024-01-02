@@ -15,7 +15,7 @@ function TypeName() {
 
     const handleSelect = (target) => {
         setValue(prev => {
-            return {...prev, type: target.innerText, data: {text : "https://tfigueira45.github.io/qrcode_generator"}}
+            return {...prev, type: target.innerText, data: {...prev.data}}
         })
     }
 

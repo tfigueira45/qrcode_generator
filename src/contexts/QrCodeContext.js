@@ -7,7 +7,7 @@ export function QrcodeProvider({children}) {
         name: "",
         type: "URL",
         data: {
-            text: "https://tfigueira45.github.io/qrcode_generator",
+            text: "",
             bgColor: "#ffffff",
             fgColor: "#000000"
         }
