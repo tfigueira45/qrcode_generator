@@ -3,7 +3,7 @@ import arrowBottom from "../../assets/icons/arrowBottom.svg";
 import "./DropdownMenu.css";
 
 
-function DropdownMenu({options, handleSelect}) {
+function DropdownMenu({options, handleSelect, className}) {
     
     const [ data, setData ] = useState(options[0])
     const [showOptions, setShowOptions] = useState(false)
@@ -36,7 +36,7 @@ function DropdownMenu({options, handleSelect}) {
         return (
             <ul className={`${showOptions ? "show" : ""} p-5 rounded`} ref={menuRef} >
                 {values.map((item, i) => {
-                    return <li className="m-5" key={i} translate="no" onClick={handleClick}>{item}</li>
+                    return <li className="m-10" key={i} translate="no" onClick={handleClick}>{item}</li>
                 })}
             </ul>
         )
@@ -56,7 +56,7 @@ function DropdownMenu({options, handleSelect}) {
     }
 
     return (
-        <nav className="centered column">
+        <nav className={`centered column ${className}`}>
             <DropBtn />
             <Menu values={options} />
         </nav>

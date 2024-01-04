@@ -9,21 +9,25 @@ const Url = () => {
     const { value, setValue } = useContext(QrCodeContext);
     const [ selected, setSelected ] = useState("https://")
 
-    const handleChange = ({target}) => {
+    const handleChange = ({ target }) => {
         setValue(prev => {
-            const data = prev.data
-            return {...prev, data: {...data, text: /\../.test(`${selected}${target.value}`) ? `${selected}${target.value}` : value.data.text}}
-        })
-    }
+            const { data } = prev;
+            const { value: targetValue } = target;
+            const newText = /\../.test(`${selected}${targetValue}`) ? `${selected}${targetValue}` : targetValue === "" ? "" : data.text;
+    
+            return { ...prev, data: { ...data, text: newText } };
+        });
+    };
+    
 
     const handleSelect = (target) => {
         setSelected(target.innerText)
     }
 
     return (
-        <div className="qrcode-url-container centered">
+        <div className="qrcode-url-container centered p-15">
             <DropdownMenu options={options}  handleSelect={handleSelect} />
-            <input type="text" className="input-style wd-100 mr-15" onChange={handleChange} placeholder="Insira a URL" />
+            <input type="text" className="input-style wd-100 ml-15" onChange={handleChange} placeholder="Insira a URL" />
         </div>
     )
 }

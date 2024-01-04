@@ -5,7 +5,7 @@ import { QrCodeContext } from "../../../contexts/QrCodeContext";
 
 function TypeName() {
     const { setValue } = useContext(QrCodeContext)
-    const liItems = ["URL", "Text", "Wifi", "SMS"]
+    const liItems = ["URL", "Text", "Wifi"]
 
     const handleChange = ({target}) => {
         setValue(prev => {
@@ -22,7 +22,7 @@ function TypeName() {
     return (
         <section className="qrcode-typeName-container centered p-15">
             <DropdownMenu options={liItems} handleSelect={handleSelect} />
-            <input type="text" className="wd-100 m-15 input-style" onChange={handleChange} placeholder="Dê um nome ao seu QR code"/>
+            <input type="text" className="wd-100 ml-15 input-style" onChange={handleChange} placeholder="Dê um nome ao seu QR code"/>
         </section>
     )
 }

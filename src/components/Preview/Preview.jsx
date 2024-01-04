@@ -7,34 +7,35 @@ import InputColor from "./InputColor/InputColor";
 function Preview() {
     const { value } = useContext(QrCodeContext);
     const downloadRef = useRef();
-
-    const text = value.data.text;
-    const name = value.name
-    
-    const [colors, setColors] = useState({
+     
+    const [data, setData] = useState({
+        text: value.data.text,
+        name: value.name,
         bgColor: value.data.bgColor,
         fgColor: value.data.fgColor
     });
 
     useEffect(() => {
-        setColors({
+        setData({
+            text: value.data.text,
+            name: value.name,
             bgColor: value.data.bgColor,
             fgColor: value.data.fgColor
         })
         const canvas = document.querySelector('canvas');
         if(canvas && downloadRef.current) {
-            downloadRef.current.href = canvas.toDataURL();
-            downloadRef.current.download = `${name}-QR.png`;
+            downloadRef.current.href = data.text ? canvas.toDataURL() : "#";
+            downloadRef.current.setAttribute("download", `${data.name}-QR.png`)
         }
-    }, [text, name, colors])
+    }, [value])
     
     return (
         <section className="preview flex column w-400 p-15">
             <h1>Preview</h1>
             <QRCodeCanvas 
-                value={text}
-                bgColor={colors.bgColor}
-                fgColor={colors.fgColor}
+                value={data.text}
+                bgColor={data.bgColor}
+                fgColor={data.fgColor}
                 includeMargin="true"
             />
             <div className="custom">
@@ -43,7 +44,7 @@ function Preview() {
                 <InputColor label="Cor Primária" index="fgColor" defValue="#000000" />
                 <InputColor label="Cor de Fundo" index="bgColor" defValue="#ffffff" />
             </div>
-            { text && name && colors ? <a ref={downloadRef} href="" className="download centered p-10 bg-blue rounded" download>Download</a> : <></>}
+            <a ref={downloadRef} href="" className={`download p-10 bg-blue rounded ${data.text ? "centered" : "none"}`} >Download</a>
         </section>
     )
 }
