@@ -11,7 +11,7 @@ const Text = () => {
     }
 
     return (
-        <div className="qrcode-text-container centered p-15">
+        <div className="qrcode-text-container centered">
             <input type="text" className="input-style wd-100" onChange={handleChange} placeholder="Insira sua mensagem" />
         </div>
     )

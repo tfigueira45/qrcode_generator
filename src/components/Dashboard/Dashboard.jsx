@@ -7,7 +7,7 @@ function Dashboard() {
 
     return (
         <section className="dashboard flex column">
-            <h2 className="p-15 w-500">Crie um novo QR Code</h2>
+            <h2 className="w-500">Crie um novo QR Code</h2>
             <TypeName />
             <EnterData />
         </section>

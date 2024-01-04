@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./TypeName.css";
 import DropdownMenu from "../../DropdownMenu/DropdownMenu";
 import { QrCodeContext } from "../../../contexts/QrCodeContext";
 
@@ -20,9 +19,9 @@ function TypeName() {
     }
 
     return (
-        <section className="qrcode-typeName-container centered p-15">
+        <section className="qrcode-typeName-container centered">
             <DropdownMenu options={liItems} handleSelect={handleSelect} />
-            <input type="text" className="wd-100 ml-15 input-style" onChange={handleChange} placeholder="Dê um nome ao seu QR code"/>
+            <input type="text" className="wd-100 input-style" onChange={handleChange} placeholder="Dê um nome ao seu QR code"/>
         </section>
     )
 }
