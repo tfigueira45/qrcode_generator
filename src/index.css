@@ -111,8 +111,8 @@ code {
   width: 100%;
 }
 
-.wd-100-200px {
-  width: calc(100% - 200px);
+.wd-100-30px {
+  width: calc(100% - 30px);
 }
 
 .wd-50 {
