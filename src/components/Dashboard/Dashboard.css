@@ -3,12 +3,6 @@
     grid-row: 2 / 4;
 }
 
-.dashboard h2 {
-    font-size: 20px;
-    color: #353333;
-}
-
-
 @media (max-width: 900px) {
     .dashboard {
         grid-row: 2 / 3;

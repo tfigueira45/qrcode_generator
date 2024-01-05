@@ -48,7 +48,7 @@ function DropdownMenu({options, handleSelect, className}) {
         }
 
         return (
-            <div className="dropBtn centered rounded" onClick={handleClick}>
+            <div className="dropBtn centered rounded fz-18 wd-100" onClick={handleClick}>
                 <span>{data}</span>
                 <img  src={arrowBottom} alt="arrownBottom" />
             </div>

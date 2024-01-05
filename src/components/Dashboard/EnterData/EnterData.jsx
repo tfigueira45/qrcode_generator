@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./EnterData.css";
 import { QrCodeContext } from "../../../contexts/QrCodeContext";
 import Url from "./Url/Url";
 import Text from "./Text/Text";
@@ -10,7 +9,7 @@ function EnterData() {
 
     return (
         <section className="qrcode-data-container">
-            <h1 className="w-500">{value.type}</h1>
+            <h1 className="w-500 p-15 color-gray fz-20">{value.type}</h1>
             {value.type === "Text" ? <Text /> : value.type === "URL" ? <Url /> : <Wifi />}
         </section>
     )

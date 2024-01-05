@@ -30,8 +30,8 @@ function Preview() {
     }, [value])
     
     return (
-        <section className="preview flex column w-400 p-15">
-            <h1>Preview</h1>
+        <section className="preview flex align-center column w-400 p-15">
+            <h1 className="color-gray">Preview</h1>
             <QRCodeCanvas 
                 value={data.text}
                 bgColor={data.bgColor}
@@ -39,12 +39,12 @@ function Preview() {
                 includeMargin="true"
             />
             <div className="custom">
-                <h3>Editar Design</h3>
-                <span className="block fz-20">Cores</span>
+                <h3 className="color-gray">Editar Design</h3>
+                <span className="block fz-20 pt-5">Cores</span>
                 <InputColor label="Cor Primária" index="fgColor" defValue="#000000" />
                 <InputColor label="Cor de Fundo" index="bgColor" defValue="#ffffff" />
             </div>
-            <a ref={downloadRef} href="" className={`download p-10 bg-blue rounded ${data.text ? "centered" : "none"}`} >Download</a>
+            <a ref={downloadRef} href="" className={`download p-5 bg-blue rounded ${data.text ? "centered" : "none"}`} >Download</a>
         </section>
     )
 }

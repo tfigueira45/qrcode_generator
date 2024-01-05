@@ -25,8 +25,8 @@ const Url = () => {
     }
 
     return (
-        <div className="qrcode-url-container centered">
-            <DropdownMenu options={options}  handleSelect={handleSelect} />
+        <div className="qrcode-url-container centered p-15 g-15">
+            <DropdownMenu options={options}  handleSelect={handleSelect} className="ml-15" />
             <input type="text" className="input-style wd-100" onChange={handleChange} placeholder="Insira a URL" />
         </div>
     )
