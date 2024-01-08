@@ -21,5 +21,19 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "description": "Gere QR Codes de maneira simples e rápida com o SimpleQR",
+  "dir": "ltr",
+  "lang": "pt",
+  "orientation": "natural",
+  "display_override": [
+    "fullscreen",
+    "browser",
+    "standalone",
+    "window-controls-overlay",
+    "minimal-ui"
+  ],
+  "categories": [
+    "utilities"
+  ]
 }
