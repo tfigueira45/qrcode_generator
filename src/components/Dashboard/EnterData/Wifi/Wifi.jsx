@@ -36,7 +36,7 @@ function Wifi() {
             <DropdownMenu options={options} handleSelect={handleSelect} className="ml-20" />
 
             <span className="block ml-5 mb-10 mt-10 fz-18">Senha</span>
-            <input type="text" className="input-style wd-100-30px ml-10" id="password" onChange={handleChange} placeholder="Digite a senha da rede"/>
+            <input type="password" className="input-style wd-100-30px ml-10" id="password" onChange={handleChange} placeholder="Digite a senha da rede"/>
         </div>
     )
 }
